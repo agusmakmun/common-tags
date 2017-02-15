@@ -11,7 +11,7 @@ setup(
     version=__VERSION__,
     url="https://github.com/agusmakmun/common-tags/",
     download_url="https://github.com/agusmakmun/common-tags/tarball/v{}".format(__VERSION__),
-    description="Common templatetags provide for Django",
+    description="Common templatetags provides for Django",
     long_description=open("README.rst").read(),
     license="MIT",
     author=__AUTHOR__,

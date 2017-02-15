@@ -5,7 +5,7 @@ common-tags |pypi version|
    image:: https://img.shields.io/pypi/v/common-tags.svg?style=flat-square
    :target: https://pypi.python.org/pypi/common-tags
 
-.. image:: https://img.shields.io/badge/license-GNUGPLv3-blue.svg?style=flat-square
+.. image:: https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
    :target: https://raw.githubusercontent.com/agusmakmun/common-tags/master/LICENSE
 
 .. image:: https://img.shields.io/pypi/pyversions/common-tags.svg?style=flat-square
@@ -14,7 +14,7 @@ common-tags |pypi version|
 .. image:: https://img.shields.io/badge/Django-1.8,%201.9,%201.10-green.svg?style=flat-square
   :target: https://www.djangoproject.com
 
-Common templatetags provide for Django.
+Common templatetags provides for Django.
 
 
 Installation
