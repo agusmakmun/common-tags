@@ -119,6 +119,7 @@ def counter(model_name, filter=None):
     return model.objects.count()
 
 
+@register.filter
 def get_tuple_value(tuples, key):
     """
     an example tuples for:
@@ -139,6 +140,7 @@ def get_tuple_value(tuples, key):
     return key
 
 
+@register.filter
 def markdown_find_images(markdown_text):
     """
     return list of image urls inside `markdown_text`.

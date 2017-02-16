@@ -52,11 +52,11 @@ For complete usage, see `common/templatetags/common_tags.py`_
 
 Contributing
 ------------------------------
+
 Feel free to `open a bug`_ or `contribute to code`_ !
 
 
-
-.. _PyPI: https://pypi.python.org/pypi/django-contact-widget
+.. _PyPI: https://pypi.python.org/pypi/common-tags
 .. _common/templatetags/common_tags.py: https://github.com/agusmakmun/common-tags/blob/master/common/templatetags/common_tags.py
 .. _open a bug: https://github.com/agusmakmun/common-tags/issues
 .. _contribute to code: https://github.com/agusmakmun/common-tags/pulls
