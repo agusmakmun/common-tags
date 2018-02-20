@@ -203,3 +203,46 @@ def get_youtube_video_id(url):
         return query.path[1:]
     else:
         raise ValueError
+
+
+@register.filter
+def keywords_splitter(keywords):
+    """
+    eg:
+        'similaritas, algoritma similaritas, SWOT, pemetaan SWOT'
+    to:
+        ['similaritas', 'algoritma similaritas', 'SWOT', 'pemetaan SWOT']
+    """
+    keywords = keywords if keywords is not None else ''
+    return list(k.strip() for k in keywords.split(','))
+
+
+@register.filter
+def as_rupiah(money):
+    """
+    return a number as rupiah.
+    eg: 2000000 => Rp 2.000.000
+    """
+    if money is None:
+        return 0
+
+    y = str(money)
+    if len(y) <= 3:
+        return 'Rp ' + y
+    else:
+        p = y[-3:]
+        q = y[:-3]
+        return as_rupiah(q) + '.' + p
+
+
+@register.filter
+def get_dict_value(dct, key):
+    """
+    return a dict value from the specific key.
+    """
+    return dct.get(key)
+
+
+@register.filter
+def as_string(value):
+    return '%s' % value
