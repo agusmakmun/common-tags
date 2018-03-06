@@ -246,3 +246,14 @@ def get_dict_value(dct, key):
 @register.filter
 def as_string(value):
     return '%s' % value
+
+
+@register.filter
+def get_client_ip(request):
+    """ return ip address from client """
+    ip = request.META.get('HTTP_X_FORWARDED_FOR', None)
+    if ip:
+        ip = ip.split(', ')[0]
+    else:
+        ip = request.META.get('REMOTE_ADDR', '')
+    return ip
