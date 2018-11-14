@@ -257,3 +257,31 @@ def get_client_ip(request):
     else:
         ip = request.META.get('REMOTE_ADDR', '')
     return ip
+
+
+@register.filter
+def timedelta_to_hours(timedelta):
+    """
+    convert timedelta to float hours
+
+    >>> import datetime
+    >>> now = datetime.datetime.now()
+    >>> old = now - datetime.timedelta(days=3, hours=21, minutes=15)
+    >>> timedelta = now - old
+    datetime.timedelta(3, 76500)
+
+    >>> timedelta_to_hours(timedelta)
+    93.2
+    >>>
+    """
+    days = timedelta.days
+    hours = timedelta.seconds//3600
+    minutes = (timedelta.seconds//60) % 60
+
+    days_to_hours = 24 * days
+    all_hours = days_to_hours + hours
+
+    if minutes >= 10:
+        all_hours = float('%s.%s' % (all_hours, minutes))
+
+    return round(all_hours, 1)
